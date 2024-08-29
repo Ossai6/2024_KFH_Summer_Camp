@@ -1,0 +1,226 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    color: #333;
+    background-color: #8EF9F3;
+}
+
+header.intro {
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+    
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    background-color: #2196f3;
+    padding: 10px 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    background-color: white;
+    padding: 3px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.intro-text, .activities, .learning, .explore, .teams, .gallery {
+    padding: 20px 20px;
+    text-align: center;
+}
+
+
+.activities ul, .gallery-images {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+.activities ul li, .gallery-images img {
+    background: #305252;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 200px;
+    text-align: center;
+    color: white;
+}
+
+.gallery-images img {
+    width: 100%;
+    max-width: 250px;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.gallery-images img:hover {
+    transform: scale(1.05);
+}
+
+.teams .team {
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    margin: 20px 0;
+    padding: 20px;
+    text-align: left;
+}
+
+.teams .team h3 {
+    color: #444;
+    margin-bottom: 10px;
+}
+
+.teams .team p {
+    margin-bottom: 15px;
+}
+
+.cta-button, .cta-button1, .cta-button2, .cta-button3 {
+    display: inline-block;
+    padding: 10px 20px;
+    color: white;
+    background-color: orange;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.cta-button1 {
+    background-color: green;
+}
+
+.cta-button2 {
+    background-color: red;
+}
+
+.cta-button3 {
+    background-color: blue;
+}
+
+.cta-button:hover {
+    background-color: #333;
+}
+
+footer {
+    background-color: #305252;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+
+.toggle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0; /* Remove margins to ensure full width */
+    width: 100%; /* Full width of the browser */
+    position: relative;
+    overflow: hidden;
+}
+
+.toggle-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* Full width of the browser */
+    position: relative;
+}
+
+.image-container {
+    flex: 1;
+    text-align: center;
+    overflow: hidden;
+    width: 100%; /* Full width of the browser */
+}
+
+#toggle-image {
+    width: 100%; /* Full width of the browser */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 0; /* Remove any border-radius */
+    object-fit: cover; /* Cover the entire width and height */
+}
+
+.arrow {
+    font-size: 50px; /* Increase arrow size */
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    user-select: none;
+    z-index: 10;
+    padding: 10px;
+}
+
+.left-arrow {
+    left: 20px; /* Position arrow slightly away from the edge */
+}
+
+.right-arrow {
+    right: 20px; /* Position arrow slightly away from the edge */
+}
+
+.arrow:hover {
+    color: #4caf50;
+}
+
+
+#toggle-image {
+    width: 100%; /* Ensures the image fills the width of the container */
+     /* Maximum width for landscape display */
+    height: 450px; /* Fixed height to enforce landscape aspect ratio */
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    object-fit: cover; /* Ensures the image covers the area while maintaining aspect ratio */
+}
+
+
+
+
+header.intro {
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+    position: relative;
+}
+
+header.intro::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Change this color and opacity to fit your theme */
+    z-index: 1;
+}
+
+header.intro h1 {
+    position: relative;
+    z-index: 2;
+}
