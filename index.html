@@ -28,16 +28,25 @@
 
     <section class="toggle">
         <div class="toggle-container">
-            <span class="arrow left-arrow" onclick="showPrevious()">&#60;</span>
+            <span class="arrow left-arrow" onclick="showPreviousSlide1()">&#60;</span>
             <div class="image-container">
-                <img id="toggle-image" src="IMG-20240825-WA0031.jpg" alt="Activity 1">
+                <img id="toggle-image1" src="IMG-20240825-WA0031.jpg" alt="Activity 1">
             </div>
-            <span class="arrow right-arrow" onclick="showNext()">&#62;</span>
+            <span class="arrow right-arrow" onclick="showNextSlide1()">&#62;</span>
         </div>
     </section>
     
-    
-    
+    <h2 class="intro-text">Early Years and Upper Primary Gallery Slides</h2>
+     <!-- Second Slide -->
+     <section class="toggle">
+        <div class="toggle-container">
+            <span class="arrow left-arrow" onclick="showPreviousSlide2()">&#60;</span>
+            <div class="image-container">
+                <img id="toggle-image2" src="others/IMG-20240825-WA0050.jpg" alt="Activity 2">
+            </div>
+            <span class="arrow right-arrow" onclick="showNextSlide2()">&#62;</span>
+        </div>
+    </section>
     
 
     <section class="activities">
@@ -45,14 +54,15 @@
         <ul>
             <li>Introduction to Web Development</li>
             <li>Creating Web Pages with HTML & CSS</li>
-            <li>Quizes and Brain Storming</li>
-            <li>Group Projects and Team Collaboration</li>
+            <li>Quizes and Brain Storming Sessions</li>
+            <li>Group Projects</li>
+            <li>Team Collaboration</li>
         </ul>
     </section>
 
     <section class="learning">
         <h2>What They Learned</h2>
-        <p>Throughout the camp, students learned how to design web pages using HTML, and style them with CSS. They also developed teamwork skills, worked on group projects, and gained coding experience.</p>
+        <p>Throughout the camp, students learned how to design web pages using HTML, and style them with CSS. They also developed teamwork skills, worked on group projects, and gained coding experience with Text Based programming languages as highlighted above.</p>
     </section>
 
     <section class="teams">
@@ -86,8 +96,9 @@
 
 
     <script>
-        let currentImageIndex = 0;
-        const images = [
+        // First Slider Images and Functions
+        let currentImageIndex1 = 0;
+        const images1 = [
             'IMG-20240825-WA0031.jpg',
             'IMG-20240825-WA0032.jpg',
             'IMG-20240825-WA0035.jpg',
@@ -100,20 +111,51 @@
             'IMG-20240825-WA0042.jpg',
             'IMG-20240825-WA0040.jpg'
         ];
-        
-        function showNext() {
-            currentImageIndex = (currentImageIndex + 1) % images.length;
-            document.getElementById('toggle-image').src = images[currentImageIndex];
+
+        function showNextSlide1() {
+            currentImageIndex1 = (currentImageIndex1 + 1) % images1.length;
+            document.getElementById('toggle-image1').src = images1[currentImageIndex1];
         }
-        
-        function showPrevious() {
-            currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
-            document.getElementById('toggle-image').src = images[currentImageIndex];
+
+        function showPreviousSlide1() {
+            currentImageIndex1 = (currentImageIndex1 - 1 + images1.length) % images1.length;
+            document.getElementById('toggle-image1').src = images1[currentImageIndex1];
         }
-        
-        document.querySelector('.right-arrow').addEventListener('mouseenter', showNext);
-        document.querySelector('.left-arrow').addEventListener('mouseenter', showPrevious);
-        </script>
+
+        // Second Slider Images and Functions
+        let currentImageIndex2 = 0;
+        const images2 = [
+            'others/IMG-20240825-WA0033.jpg',
+            'others/IMG-20240825-WA0044.jpg',
+            'others/IMG-20240825-WA0050.jpg',
+            'others/IMG-20240825-WA0056.jpg',
+            'others/IMG-20240825-WA0062.jpg',
+            'others/IMG-20240825-WA0124.jpg',
+            'others/IMG-20240829-WA0022.jpg',
+            'others/IMG-20240829-WA0023.jpg',
+            'others/IMG-20240829-WA0024.jpg',
+            'others/IMG-20240829-WA0025.jpg',
+            'others/IMG-20240829-WA0026.jpg',
+            'others/IMG-20240829-WA0027.jpg',
+            'others/IMG-20240829-WA0028.jpg',
+            'others/IMG-20240829-WA0029.jpg',
+            'others/IMG-20240829-WA0030.jpg',
+            'others/IMG-20240829-WA0031.jpg',
+            'others/IMG-20240829-WA0032.jpg',
+            'others/IMG-20240829-WA0033.jpg',
+            'others/IMG-20240829-WA0034.jpg'
+        ];
+
+        function showNextSlide2() {
+            currentImageIndex2 = (currentImageIndex2 + 1) % images2.length;
+            document.getElementById('toggle-image2').src = images2[currentImageIndex2];
+        }
+
+        function showPreviousSlide2() {
+            currentImageIndex2 = (currentImageIndex2 - 1 + images2.length) % images2.length;
+            document.getElementById('toggle-image2').src = images2[currentImageIndex2];
+        }
+    </script>
         
         
         

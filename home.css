@@ -130,7 +130,7 @@ footer {
 }
 
 
-.toggle {
+.toggle, .toggle1 {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -140,7 +140,7 @@ footer {
     overflow: hidden;
 }
 
-.toggle-container {
+.toggle-container, .toggle-container1 {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -148,16 +148,16 @@ footer {
     position: relative;
 }
 
-.image-container {
+.image-container, .image-container1 {
     flex: 1;
     text-align: center;
     overflow: hidden;
     width: 100%; /* Full width of the browser */
 }
 
-#toggle-image {
+#toggle-image1, #toggle-image2 {
     width: 100%; /* Full width of the browser */
-    height: auto; /* Maintain aspect ratio */
+    height: 600px; /* Maintain aspect ratio */
     border-radius: 0; /* Remove any border-radius */
     object-fit: cover; /* Cover the entire width and height */
 }
@@ -196,7 +196,14 @@ footer {
     object-fit: cover; /* Ensures the image covers the area while maintaining aspect ratio */
 }
 
-
+#toggle-image-1 {
+    width: 100%; /* Ensures the image fills the width of the container */
+     /* Maximum width for landscape display */
+    height: 450px; /* Fixed height to enforce landscape aspect ratio */
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    object-fit: cover; /* Ensures the image covers the area while maintaining aspect ratio */
+}
 
 
 header.intro {
@@ -223,4 +230,37 @@ header.intro::before {
 header.intro h1 {
     position: relative;
     z-index: 2;
+}
+
+            
+/* Media query for screens with a maximum width of 600px */
+@media (max-width: 600px) {
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .team {
+        text-align: center;
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .team h3 {
+        margin-top: 10px;
+    }
+
+    .cta-button, .cta-button1, .cta-button2, .cta-button3 {
+        display: inline-block;
+        margin-top: 10px;
+        text-align: center;
+    }
 }
